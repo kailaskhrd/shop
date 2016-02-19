@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 	get '/signup' => 'users#new', :as => 'signup'
 	resources :sessions, :only => [:new, :create, :destroy]
 
-  resources :users
-  get 'page/index'
-  root 'page#index'
+ 	resources :users
+ 
+   	get  'home'  => 'static_pages#home'
+	get  'help'  => 'static_pages#help'
+	root :to => "static_pages#home"
 end
