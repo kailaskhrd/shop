@@ -29,6 +29,7 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'will_paginate'
 gem 'paperclip', '~> 4.3.0'
 gem "crummy", "~> 1.8.0"
+gem "pundit"
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -5,7 +5,7 @@
           <%= link_to "<i class='fa fa-fw fa-dashboard'></i> Dashboard".html_safe, root_path, id: "logo" , class: "navbar-brand"%>           
         </li>
         <li>
-            <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+            <%= link_to "<i class='fa fa-fw fa-table'></i> Role".html_safe, roles_path %>
         </li>
         <li>
             <%= link_to "<i class='fa fa-fw fa-table'></i> User list".html_safe, users_path %>
