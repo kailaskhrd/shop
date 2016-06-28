@@ -18,7 +18,7 @@ class RolesController < ApplicationController
 
   def update
     @roles = Role.all
-    @role = Role.find(params[:id])
+    @role = Role.find(params[:id])      
     
     @role.update_attributes(role_params)
   end

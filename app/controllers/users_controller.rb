@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
  
- before_filter :authorize, :except => [:new, :create]
+ before_filter :authorize_login, :except => [:new, :create]
 
   def index
      @users = User.all
@@ -22,8 +22,15 @@ class UsersController < ApplicationController
   def update
     @users = User.all
     @user = User.find(params[:id])
-    
+    authorize @user, :update?
+
     @user.update_attributes(user_params)
+    redirect_to user_path(@user)
+  end
+
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def delete

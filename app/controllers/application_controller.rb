@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   include Pundit
   protect_from_forgery with: :exception
 
-  def authorize
+  def authorize_login
     redirect_to '/login' unless current_user
   end
 
