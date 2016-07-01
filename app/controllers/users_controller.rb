@@ -25,6 +25,8 @@ class UsersController < ApplicationController
     authorize @user, :update?
 
     @user.update_attributes(user_params)
+
+    
     redirect_to user_path(@user)
   end
 
