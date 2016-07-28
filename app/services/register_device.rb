@@ -17,11 +17,3 @@ class RegisterDevice
   end
 
 end
-
-
-
-if RegisterDevice.new(user, device).call
-
-else
-
-end
