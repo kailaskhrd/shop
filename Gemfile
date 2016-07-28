@@ -30,6 +30,7 @@ gem 'will_paginate'
 gem 'paperclip', '~> 4.3.0'
 gem "crummy", "~> 1.8.0"
 gem "pundit"
+gem 'pry'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

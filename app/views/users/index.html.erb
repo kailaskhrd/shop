@@ -1,6 +1,6 @@
 
 <div class="well">
-  <%= link_to "New User", new_user_path, remote: true, class: "btn btn-primary" %>
+  <%= link_to "New User", new_user_path, class: "btn btn-primary" %>
 </div>
 <div class="new-user"></div>
 
@@ -21,7 +21,7 @@
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user , class: "btn btn-default" %></td>
         <td><%= link_to "Edit", edit_user_path(user), remote: true, class: "btn btn-default" %></td>
-        <td><%= link_to "Delete", user_delete_path(user), remote: true, class: "btn btn-danger" %></td>
+        <td><%= link_to "Delete", user_path(user),:method => 'delete', class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
