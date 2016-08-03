@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     roles = Role.where(:id =>role_params)
     @user = User.create(user_params)   
     if !@user.errors.any?
-       @user << roles
+       @user.roles << roles
       redirect_to users_path, notice: 'user created '
     else
       render 'new'
@@ -28,8 +28,11 @@ class UsersController < ApplicationController
   def update
     @users = User.all
     @user = User.find(params[:id])
-    authorize @user, :update?
-    @user.update_attributes(user_params)    
+    roles = Role.where(:id =>role_params)
+    binding.pry
+    #authorize @user, :update?
+    @user.update_attributes(user_params)  
+    @user.roles << roles
     redirect_to user_path(@user)
   end
 

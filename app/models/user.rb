@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :assignments
   has_many :roles, through: :assignments
+  has_one :picture, :as => :picturable
 
   validates :first_name, :presence => true
   validates :last_name, :presence => true
